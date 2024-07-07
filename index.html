@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance Plans</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #ff0000;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #ff3333;
+        }
+        nav a {
+            color: #fff;
+            padding: 1rem;
+            text-decoration: none;
+            text-align: center;
+        }
+        nav a:hover {
+            background-color: #cc0000;
+        }
+        .container {
+            padding: 2rem;
+        }
+        .filter-section, .plans-section, .prompt-section {
+            margin-bottom: 2rem;
+        }
+        .filter-section label, .prompt-section label {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        .filter-section input, .filter-section select, .prompt-section input, .prompt-section select {
+            width: 100%;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        footer {
+            background-color: #ff0000;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        @media (min-width: 768px) {
+            .filter-section, .plans-section, .prompt-section {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            .filter-section input, .filter-section select, .prompt-section input, .prompt-section select {
+                width: 48%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Choose Your Insurance Plan</h1>
+    </header>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#health">Health Insurance</a>
+        <a href="#auto">Auto Insurance</a>
+        <a href="#home-insurance">Home Insurance</a>
+    </nav>
+    <div class="container">
+        <div id="home" class="tab-content">
+            <h2>Welcome to Our Insurance Plan Selector</h2>
+            <p>Select an insurance type from the tabs above to get started.</p>
+        </div>
+        <div id="health" class="tab-content">
+            <h2>Health Insurance Plans</h2>
+            <div class="filter-section">
+                <label for="price-range">Price Range:</label>
+                <input type="range" id="
+                <input type="range" id="price-range" name="price-range" min="0" max="1000">
+                <label for="company">Company:</label>
+                <select id="company" name="company">
+                    <option value="">Select Company</option>
+                    <option value="company1">Company 1</option>
+                    <option value="company2">Company 2</option>
+                    <!-- Add more companies as needed -->
+                </select>
+                <label for="coverage">Coverage:</label>
+                <select id="coverage" name="coverage">
+                    <option value="">Select Coverage</option>
+                    <option value="basic">Basic</option>
+                    <option value="premium">Premium</option>
+                    <!-- Add more coverage options as needed -->
+                </select>
+            </div>
+            <div class="plans-section">
+                <!-- Insurance plans will be dynamically inserted here based on filters -->
+            </div>
+        </div>
+        <div id="auto" class="tab-content">
+            <h2>Auto Insurance Plans</h2>
+            <div class="filter-section">
+                <label for="price-range-auto">Price Range:</label>
+                <input type="range" id="price-range-auto" name="price-range-auto" min="0" max="1000">
+                <label for="company-auto">Company:</label>
+                <select id="company-auto" name="company-auto">
+                    <option value="">Select Company</option>
+                    <option value="company1">Company 1</option>
+                    <option value="company2">Company 2</option>
+                    <!-- Add more companies as needed -->
+                </select>
+                <label for="coverage-auto">Coverage:</label>
+                <select id="coverage-auto" name="coverage-auto">
+                    <option value="">Select Coverage</option>
+                    <option value="basic">Basic</option>
+                    <option value="premium">Premium</option>
+                    <!-- Add more coverage options as needed -->
+                </select>
+            </div>
+            <div class="plans-section">
+                <!-- Insurance plans will be dynamically inserted here based on filters -->
+            </div>
+        </div>
+        <div id="home-insurance" class="tab-content">
+            <h2>Home Insurance Plans</h2>
+            <div class="filter-section">
+                <label for="price-range-home">Price Range:</label>
+                <input type="range" id="price-range-home" name="price-range-home" min="0" max="1000">
+                <label for="company-home">Company:</label>
+                <select id="company-home" name="company-home">
+                    <option value="">Select Company</option>
+                    <option value="company1">Company 1</option>
+                    <option value="company2">Company 2</option>
+                    <!-- Add more companies as needed -->
+                </select>
+                <label for="coverage-home">Coverage:</label>
+                <select id="coverage-home" name="coverage-home">
+                    <option value="">Select Coverage</option>
+                    <option value="basic">Basic</option>
+                    <option value="premium">Premium</option>
+                    <!-- Add more coverage options as needed -->
+                </select>
+            </div>
+            <div class="plans-section">
+                <!-- Insurance plans will be dynamically inserted here based on filters -->
+            </div>
+        </div>
+    </div>
+    <div class="prompt-section">
+        <h2>Provide Your Information</h2>
+        <label for="payment-amount">Expected Payment Amount:</label>
+        <input type="number" id="payment-amount" name="payment-amount">
+        <label for="level-of-care">Level of Care/Coverage:</label>
+        <select id="level-of-care" name="level-of-care">
+            <option value="basic">Basic</option>
+            <option value="premium">Premium</option>
+            <!-- Add more levels of care as needed -->
+        </select>
+        <label for="additional-preferences">Additional Preferences or Requirements:</label>
+        <textarea id="additional-preferences" name="additional-preferences" rows="4"></textarea>
+    </div>
+    <footer>
+        <p>Contact us at: info@insuranceplans.com</p>
+        <p><a href="#privacy-policy">Privacy Policy</a> | <a href="#terms-of-service">Terms of Service</a></p>
+    </footer>
+    <script>
+        // JavaScript for tab navigation and dynamic content insertion
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabs = document.querySelectorAll('nav a');
+            const tabContents = document.querySelectorAll('.tab-content');
+            
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    
+                    // Hide all tab contents
+                    tabContents.forEach(content => {
+                        content.style.display = 'none';
+                    });
+                    
+                    // Show the selected tab content
+                    document.getElementById(targetId).style.display = 'block';
+                });
+            });
+            
+            // Show the home tab by default
+            document.getElementById('home').style.display = 'block';
+        });
+    </script>
+</body>
+</html>
+
